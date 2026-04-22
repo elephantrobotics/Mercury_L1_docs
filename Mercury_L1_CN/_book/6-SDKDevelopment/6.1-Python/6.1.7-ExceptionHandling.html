@@ -1,0 +1,832 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6 机器人异常处理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-password-z/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../6.3-ROS2/" />
+    
+    
+    <link rel="prev" href="6.1.6-VoiceFunction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+		<span class="title"></span>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">文档目录</div>
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">产品信息</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../1-ProductIntroduction/">
+            
+                <a href="../../1-ProductIntroduction/">
+            
+                    
+                    1 产品简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../2-ProductFeature/">
+            
+                <a href="../../2-ProductFeature/">
+            
+                    
+                    2 产品参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础设置</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../3-UserNotes/">
+            
+                <a href="../../3-UserNotes/">
+            
+                    
+                    3 用户须知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../4-FirstInstallAndUse/">
+            
+                <a href="../../4-FirstInstallAndUse/">
+            
+                    
+                    4 首次安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">功能与应用</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    5 软件开发指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    5.1 基于Python 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="6.1.2-ApplicationBasePython.html">
+            
+                <a href="6.1.2-ApplicationBasePython.html">
+            
+                    
+                    1 API简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="6.1.3-PythonDemo.html">
+            
+                <a href="6.1.3-PythonDemo.html">
+            
+                    
+                    2 python 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="6.1.4-Drag_teach.html">
+            
+                <a href="6.1.4-Drag_teach.html">
+            
+                    
+                    3 拖动示教
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="6.1.5-gripper.html">
+            
+                <a href="6.1.5-gripper.html">
+            
+                    
+                    4 夹爪的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="6.1.6-VoiceFunction.html">
+            
+                <a href="6.1.6-VoiceFunction.html">
+            
+                    
+                    5 语音功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.1.6" data-path="6.1.7-ExceptionHandling.html">
+            
+                <a href="6.1.7-ExceptionHandling.html">
+            
+                    
+                    6 机器人异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../6.3-ROS2/">
+            
+                <a href="../6.3-ROS2/">
+            
+                    
+                    5.2 机器人操作系统 2 (ROS2)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../6.3-ROS2/6.3.1-EnvironmentBuilding.html">
+            
+                <a href="../6.3-ROS2/6.3.1-EnvironmentBuilding.html">
+            
+                    
+                    1 环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="../6.3-ROS2/6.3.2-ROS2_Basics.html">
+            
+                <a href="../6.3-ROS2/6.3.2-ROS2_Basics.html">
+            
+                    
+                    2 ROS2 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="../6.3-ROS2/6.3.3-Rviz2Introduction.html">
+            
+                <a href="../6.3-ROS2/6.3.3-Rviz2Introduction.html">
+            
+                    
+                    3 Rviz2 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="../6.3-ROS2/6.3.4-BasicFunction.html">
+            
+                <a href="../6.3-ROS2/6.3.4-BasicFunction.html">
+            
+                    
+                    4 基本功能案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../6.4-Communication.html">
+            
+                <a href="../6.4-Communication.html">
+            
+                    
+                    5.3 基于通信协议包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../7-ExamplesRobotsUsing/">
+            
+                <a href="../../7-ExamplesRobotsUsing/">
+            
+                    
+                    6 机器人使用场景
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../7-ExamplesRobotsUsing/7.1-stag_detect.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.1-stag_detect.html">
+            
+                    
+                    6.1 二维码识别与抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../7-ExamplesRobotsUsing/7.2-robot_move.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.2-robot_move.html">
+            
+                    
+                    6.2 空间移动案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../7-ExamplesRobotsUsing/7.3-move_and_catch.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.3-move_and_catch.html">
+            
+                    
+                    6.3 多点位移动抓取案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../7-ExamplesRobotsUsing/7.4-keyboard.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.4-keyboard.html">
+            
+                    
+                    6.4 键盘打字案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../7-ExamplesRobotsUsing/7.5-dexteroushand_control.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.5-dexteroushand_control.html">
+            
+                    
+                    6.5 脚本及手套控制灵巧手案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">支持与服务</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../8-AboutUs/8-AboutUs.html">
+            
+                <a href="../../8-AboutUs/8-AboutUs.html">
+            
+                    
+                    7 关于我们
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../8-AboutUs/8.1-company.html">
+            
+                <a href="../../8-AboutUs/8.1-company.html">
+            
+                    
+                    7.1 大象机器人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../8-AboutUs/8.3-how_to_read.html">
+            
+                <a href="../../8-AboutUs/8.3-how_to_read.html">
+            
+                    
+                    7.2 如何阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../8-AboutUs/8.2-contact.html">
+            
+                <a href="../../8-AboutUs/8.2-contact.html">
+            
+                    
+                    7.3 联系我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">致谢</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../9-Acknowledgments/">
+            
+                <a href="../../9-Acknowledgments/">
+            
+                    
+                    8 致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<!-- Content nav -->
+	<div class="book-anchor">
+		<div class="book-anchor-title">在这篇文章中:</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >6 机器人异常处理</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<h1 id="&#x673A;&#x68B0;&#x81C2;&#x5F02;&#x5E38;&#x67E5;&#x770B;&#x4EE5;&#x53CA;&#x5904;&#x7406;&#x65B9;&#x6CD5;">&#x673A;&#x68B0;&#x81C2;&#x5F02;&#x5E38;&#x67E5;&#x770B;&#x4EE5;&#x53CA;&#x5904;&#x7406;&#x65B9;&#x6CD5;</h1>
+<p>&#x5F53;&#x673A;&#x68B0;&#x81C2;&#x672A;&#x6210;&#x529F;&#x6267;&#x884C;&#x8FD0;&#x52A8;&#x6307;&#x4EE4;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;python&#x7EC8;&#x7AEF;&#x4E2D;&#x67E5;&#x8BE2;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;, &#x4F8B;&#x5982;</p>
+<h2 id="1-&#x8BFB;&#x53D6;&#x673A;&#x5668;&#x4EBA;&#x72B6;&#x6001;">1 &#x8BFB;&#x53D6;&#x673A;&#x5668;&#x4EBA;&#x72B6;&#x6001;</h2>
+<h3 id="11-&#x72B6;&#x6001;&#x53CD;&#x9988;&#x89E3;&#x6790;">1.1 &#x72B6;&#x6001;&#x53CD;&#x9988;&#x89E3;&#x6790;</h3>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x6B64;&#x63A5;&#x53E3;&#x53CD;&#x9988;&#x5168;0&#xFF0C;&#x8BFB;&#x53D6;&#x673A;&#x5668;&#x4EBA;&#x72B6;&#x6001;&#xFF0C;&#x5DE6;&#x53F3;&#x81C2;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x5177;&#x4F53;&#x5982;&#x4E0B;&#xFF1A;</p>
+<hr>
+<pre><code>m.get_robot_status() #&#x8BFB;&#x53D6;&#x673A;&#x5668;&#x4EBA;&#x72B6;&#x6001;
+</code></pre><h4 id="&#x5DE6;&#x81C2;&#x8FD4;&#x56DE;&#x89E3;&#x6790;&#xFF1A;">&#x5DE6;&#x81C2;&#x8FD4;&#x56DE;&#x89E3;&#x6790;&#xFF1A;<br></h4>
+<p>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]&#x8868;&#x793A;&#xFF1A;<br>
+&#x673A;&#x5668;&#x4EBA;&#x672A;&#x5728;&#x8FD0;&#x52A8;&#xFF0C;&#x65E0;&#x5173;&#x8282;&#x8D85;&#x9650;&#xFF0C;&#x65E0;&#x5173;&#x8282;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#x3001;&#x65E0;&#x5173;&#x8282;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;<br></p>
+<p>&#x5404;&#x4E2A;&#x503C;&#x5B8C;&#x6574;&#x89E3;&#x6790;&#x5982;&#x4E0B;&#xFF1A;&lt;/br&gt;
+[&#x4FDD;&#x7559;&#xFF0C;&#x662F;&#x5426;&#x6B63;&#x5728;&#x8FD0;&#x52A8;&#xFF0C;J1&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J2&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J3&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J4&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J5&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J6&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J7&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J1&#x662F;&#x5426;&#x7535;&#x673A;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J2&#x662F;&#x5426;&#x7535;&#x673A;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J3&#x662F;&#x5426;&#x7535;&#x673A;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J4&#x662F;&#x5426;&#x7535;&#x673A;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J5&#x662F;&#x5426;&#x7535;&#x673A;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J6&#x662F;&#x5426;&#x7535;&#x673A;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J7&#x662F;&#x5426;&#x7535;&#x673A;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J1&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J2&#x662F;&#x5426;&#x7535;&#x673A;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J3&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J4&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J5&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J6&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J7&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;]</p>
+<p>&#x6848;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;<br>
+[0,1,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0]&#x8868;&#x793A;&#xFF1A;<br>
+&#x673A;&#x5668;&#x4EBA;&#x5728;&#x8FD0;&#x52A8;&#x65F6;&#x62A5;&#x9519;&#xFF0C;J4&#x62A5;&#x63A7;&#x5236;&#x9519;&#x8BEF;<br></p>
+<p>[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]&#x8868;&#x793A;&#xFF1A;<br>
+&#x673A;&#x5668;&#x4EBA;J2&#x8D85;&#x9650;<br></p>
+<p>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0]&#x8868;&#x793A;&#xFF1A;<br>
+&#x673A;&#x5668;&#x4EBA;J5&#x7EBF;&#x8DEF;&#x5F02;&#x5E38;--&#x63A5;&#x6536;&#x62A5;&#x9519;<br></p>
+<h4 id="&#x53F3;&#x81C2;&#x8FD4;&#x56DE;&#x89E3;&#x6790;&#xFF1A;">&#x53F3;&#x81C2;&#x8FD4;&#x56DE;&#x89E3;&#x6790;&#xFF1A;<br></h4>
+<p>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]&#x8868;&#x793A;&#xFF1A;<br>
+&#x673A;&#x5668;&#x4EBA;&#x672A;&#x5728;&#x8FD0;&#x52A8;&#xFF0C;&#x65E0;&#x5173;&#x8282;&#x8D85;&#x9650;&#xFF0C;&#x65E0;&#x5173;&#x8282;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#x3001;&#x65E0;&#x5173;&#x8282;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;<br></p>
+<p>&#x5404;&#x4E2A;&#x503C;&#x5B8C;&#x6574;&#x89E3;&#x6790;&#x5982;&#x4E0B;&#xFF1A;&lt;/br&gt;
+[&#x4FDD;&#x7559;&#xFF0C;&#x662F;&#x5426;&#x6B63;&#x5728;&#x8FD0;&#x52A8;&#xFF0C;J1&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J2&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J3&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J4&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J5&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J6&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J7&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J13&#x662F;&#x5426;&#x8D85;&#x9650;&#xFF0C;J1&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J2&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J3&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J4&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J5&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J6&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J7&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J13&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J11&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J12&#x662F;&#x5426;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J1&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J2&#x662F;&#x5426;&#x7535;&#x673A;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J3&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J4&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J5&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J6&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J7&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;&#xFF0C;J13&#x662F;&#x5426;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;]</p>
+<p>&#x6848;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;
+[0,1,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0]&#x8868;&#x793A;&#xFF1A;<br>
+&#x673A;&#x5668;&#x4EBA;&#x5728;&#x8FD0;&#x52A8;&#x65F6;&#x62A5;&#x9519;&#xFF0C;J4&#x62A5;&#x63A7;&#x5236;&#x9519;&#x8BEF;<br></p>
+<p>[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]&#x8868;&#x793A;&#xFF1A;<br>
+&#x673A;&#x5668;&#x4EBA;J2&#x8D85;&#x9650;<br></p>
+<p>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0]&#x8868;&#x793A;&#xFF1A;<br>
+&#x673A;&#x5668;&#x4EBA;J5&#x7EBF;&#x8DEF;&#x5F02;&#x5E38;--&#x63A5;&#x6536;&#x62A5;&#x9519;<br></p>
+<p>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0]&#x8868;&#x793A;&#xFF1A;<br>
+&#x673A;&#x5668;&#x4EBA;&#x53CC;&#x76EE;&#x3001;&#x8116;&#x5B50;&#x65E0;&#x901A;&#x4FE1;<br></p>
+<h3 id="12-&#x5F02;&#x5E38;&#x89E3;&#x51B3;">1.2 &#x5F02;&#x5E38;&#x89E3;&#x51B3;</h3>
+<h4 id="&#x5173;&#x8282;&#x8D85;&#x9650;">&#x5173;&#x8282;&#x8D85;&#x9650;</h4>
+<p>&#x5173;&#x8282;&#x8D85;&#x9650;&#x65F6;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x4E4B;&#x4E00;&#xFF1A;<br>
+&#x6267;&#x884C;&#x8D85;&#x9650;&#x56DE;&#x96F6;<br></p>
+<hr>
+<pre><code>m.over_limit_return_zero() #&#x673A;&#x5668;&#x4EBA;&#x4F1A;&#x4EE5;&#x8F83;&#x6162;&#x901F;&#x5EA6;&#x56DE;&#x5230;&#x539F;&#x70B9;
+</code></pre><p>&#x6267;&#x884C;&#x5173;&#x8282;&#x653E;&#x677E;&#xFF0C;&#x624B;&#x52A8;&#x5C06;&#x5173;&#x8282;&#x79FB;&#x52A8;&#x5230;&#x9650;&#x4F4D;&#x5185;</p>
+<hr>
+<pre><code>m.release_all_servo()
+</code></pre><h4 id="&#x5173;&#x8282;&#x786C;&#x4EF6;&#x62A5;&#x9519;">&#x5173;&#x8282;&#x786C;&#x4EF6;&#x62A5;&#x9519;</h4>
+<p>&#x5927;&#x90E8;&#x5206;&#x786C;&#x4EF6;&#x62A5;&#x9519;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5F02;&#x5E38;&#x6062;&#x590D;&#xFF0C;m.servo_restore(ID)&#xFF0C;&#x82E5;&#x4F7F;&#x7528;&#x5F02;&#x5E38;&#x6062;&#x590D;&#x6216;&#x8005;&#x673A;&#x5668;&#x4EBA;&#x91CD;&#x542F;&#x540E;&#xFF0C;&#x4ECD;&#x7136;&#x9891;&#x7E41;&#x51FA;&#x73B0;&#x6B64;&#x95EE;&#x9898;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x6211;&#x65B9;&#x5DE5;&#x7A0B;&#x5E08;&#xFF0C;&#x5177;&#x4F53;&#x5404;&#x5173;&#x8282;&#x786C;&#x4EF6;&#x8BE6;&#x7EC6;&#x62A5;&#x9519;&#x89C1;&#x56FE;1&#xFF1A;<br>
+<img src="../../resources/6-SDKDevelopment/6.1-Python/6.1.7/6-1-7-1.2-001.png" alt="pic" width="500" height="400"><br></p>
+<h4 id="&#x5173;&#x8282;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;">&#x5173;&#x8282;&#x8F6F;&#x4EF6;&#x62A5;&#x9519;</h4>
+<p>&#x8F6F;&#x4EF6;&#x4E0A;&#x7684;&#x9519;&#x8BEF;&#x53CD;&#x9988;&#x4E3B;&#x8981;&#x4E3A;&#xFF1A;&#x7EBF;&#x8DEF;&#x5F02;&#x5E38;&#x3001;can&#x6A21;&#x5757;&#x5F02;&#x5E38;&#x3001;&#x7F16;&#x7801;&#x5668;&#x5F02;&#x5E38;&#x3001;&#x6389;&#x4F7F;&#x80FD;&#x7B49;&#xFF0C;&#x5F53;&#x51FA;&#x73B0;&#x6389;&#x4F7F;&#x80FD;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;m.focus_all_servo()&#x4E0A;&#x4F7F;&#x80FD;&#x518D;&#x8FD0;&#x52A8;&#xFF0C;&#x5176;&#x5B83;&#x5F02;&#x5E38;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x6211;&#x65B9;&#x5DE5;&#x7A0B;&#x5E08;&#xFF0C;&#x5177;&#x4F53;&#x5404;&#x5173;&#x8282;&#x8F6F;&#x4EF6;&#x8BE6;&#x7EC6;&#x62A5;&#x9519;&#x89C1;&#x56FE;2&#x3001;&#x56FE;3&#xFF1A;<br>
+<img src="../../resources/6-SDKDevelopment/6.1-Python/6.1.7/6-1-7-1.2-002.png" alt="pic" width="500" height="400">
+<img src="../../resources/6-SDKDevelopment/6.1-Python/6.1.7/6-1-7-1.2-003.png" alt="pic" width="500" height="400"></p>
+<h4 id="&#x673A;&#x5668;&#x4EBA;&#x5904;&#x4E8E;&#x8FD0;&#x52A8;&#x72B6;&#x6001;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x65E0;&#x6CD5;&#x8FD0;&#x52A8;">&#x673A;&#x5668;&#x4EBA;&#x5904;&#x4E8E;&#x8FD0;&#x52A8;&#x72B6;&#x6001;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x65E0;&#x6CD5;&#x8FD0;&#x52A8;</h4>
+<p>&#x673A;&#x5668;&#x4EBA;&#x5904;&#x4E8E;&#x8FD0;&#x52A8;&#x72B6;&#x6001;&#xFF0C;&#x53D1;&#x9001;&#x8FD0;&#x52A8;&#x70B9;&#x4F4D;&#x4E0D;&#x54CD;&#x5E94;&#xFF0C;&#x8BF7;&#x5148;&#x5C06;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#x505C;&#x6B62;&#xFF0C;&#x6267;&#x884C;m.stop()&#x3001;m.resume()&#xFF0C;&#x5982;&#x4ECD;&#x7136;&#x65E0;&#x6CD5;&#x7EE7;&#x7EED;&#x8FD0;&#x52A8;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x6211;&#x65B9;&#x5DE5;&#x7A0B;&#x5E08;&#x3002;<br></p>
+<h2 id="2-&#x67E5;&#x770B;&#x6267;&#x884C;&#x8FD0;&#x52A8;&#x6307;&#x4EE4;&#x7684;&#x53CD;&#x9988;">2 &#x67E5;&#x770B;&#x6267;&#x884C;&#x8FD0;&#x52A8;&#x6307;&#x4EE4;&#x7684;&#x53CD;&#x9988;</h2>
+<h3 id="21&#x8FD0;&#x52A8;&#x5F02;&#x5E38;">2.1.&#x8FD0;&#x52A8;&#x5F02;&#x5E38;</h3>
+<h4 id="&#x63A7;&#x5236;&#x673A;&#x68B0;&#x81C2;&#x8FD0;&#x52A8;&#x5230;&#x8D85;&#x9650;&#x4F4D;&#x7F6E;">&#x63A7;&#x5236;&#x673A;&#x68B0;&#x81C2;&#x8FD0;&#x52A8;&#x5230;&#x8D85;&#x9650;&#x4F4D;&#x7F6E;</h4>
+<pre><code>form pymycobot import Mercury
+m = Mercury(&apos;/dev/ttyAMA1&apos;)
+
+m.set_joint_max_angles(1,45) #&#x8BBE;&#x7F6E;1&#x5173;&#x8282;&#x9650;&#x4F4D;&#x4E3A;45&#xB0;
+m.send_angle(1,50,10)   #&#x63A7;&#x5236;1&#x5173;&#x8282;&#x65CB;&#x8F6C;&#x81F3;50&#xB0;
+</code></pre><p>&#x6B64;&#x65F6;&#x673A;&#x68B0;&#x81C2;&#x4F1A;&#x5728;&#x9650;&#x4F4D;&#x5904;&#x505C;&#x6B62;&#x8FD0;&#x52A8;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><strong>&#x9519;&#x8BEF;&#xFF1A;&#x5173;&#x8282;1&#x4E34;&#x8FD1;&#x9650;&#x4F4D;&#xFF0C;&#x5F53;&#x524D;&#x89D2;&#x5EA6;&#x4E3A;45.535, &#x89D2;&#x5EA6;&#x8303;&#x56F4;&#x4E3A;&#xFF1A; -165.0 ~ 45.0</strong></p>
+<h5 id="&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x6839;&#x636E;&#x63D0;&#x793A;&#x7684;&#x89D2;&#x5EA6;&#x8303;&#x56F4;&#x907F;&#x5F00;&#x8F6F;&#x4EF6;&#x9650;&#x4F4D;">&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x6839;&#x636E;&#x63D0;&#x793A;&#x7684;&#x89D2;&#x5EA6;&#x8303;&#x56F4;&#x907F;&#x5F00;&#x8F6F;&#x4EF6;&#x9650;&#x4F4D;</h5>
+<hr>
+<h4 id="&#x7B1B;&#x5361;&#x5C14;&#x8FD0;&#x52A8;">&#x7B1B;&#x5361;&#x5C14;&#x8FD0;&#x52A8;</h4>
+<pre><code>m.send_angles([0.0, 0.0, 0.0, -90.0, 0.0, 89.999, 0.0], 10) #&#x63A7;&#x5236;&#x673A;&#x68B0;&#x81C2;&#x5230;&#x8D77;&#x59CB;&#x59FF;&#x6001;
+m.send_coord(1,-200,10) #&#x63A7;&#x5236;&#x673A;&#x68B0;&#x81C2;&#x8FD0;&#x52A8;&#x5230;x=-200&#x7684;&#x5750;&#x6807;&#x4F4D;&#x7F6E;
+</code></pre><p>&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x89C2;&#x6D4B;&#x5230;&#x673A;&#x68B0;&#x81C2;&#x6267;&#x884C;&#x5230;&#x4E2D;&#x9014;&#x505C;&#x6B62;&#xFF0C;&#x540C;&#x65F6;&#x663E;&#x793A;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><strong>&#x9519;&#x8BEF;&#xFF1A;&#x5173;&#x8282;2&#x4E34;&#x8FD1;&#x9650;&#x4F4D;&#xFF0C;&#x5F53;&#x524D;&#x89D2;&#x5EA6;&#x4E3A;-49.967, &#x89D2;&#x5EA6;&#x8303;&#x56F4;&#x4E3A;&#xFF1A; -50.0 ~ 120.0</strong></p>
+<h5 id="&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x6839;&#x636E;&#x63D0;&#x793A;&#x7684;&#x89D2;&#x5EA6;&#x8303;&#x56F4;&#x907F;&#x5F00;&#x8F6F;&#x4EF6;&#x9650;&#x4F4D;">&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x6839;&#x636E;&#x63D0;&#x793A;&#x7684;&#x89D2;&#x5EA6;&#x8303;&#x56F4;&#x907F;&#x5F00;&#x8F6F;&#x4EF6;&#x9650;&#x4F4D;</h5>
+<hr>
+<pre><code>m.send_coord(3,500,10) #&#x63A7;&#x5236;&#x673A;&#x68B0;&#x81C2;&#x8FD0;&#x52A8;&#x5230;z=500&#x7684;&#x5750;&#x6807;&#x4F4D;&#x7F6E;
+</code></pre><p>&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x89C2;&#x6D4B;&#x5230;&#x673A;&#x68B0;&#x81C2;&#x6267;&#x884C;&#x5230;&#x4E2D;&#x9014;&#x505C;&#x6B62;&#xFF0C;&#x540C;&#x65F6;&#x663E;&#x793A;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><strong>&#x9519;&#x8BEF;&#xFF1A;&#x76F4;&#x7EBF;&#x8FD0;&#x52A8;&#x65E0;&#x76F8;&#x90BB;&#x89E3;&#x3002;&#x8BF7;&#x68C0;&#x67E5;&#x673A;&#x5668;&#x4EBA;&#x624B;&#x81C2;&#x8DE8;&#x5EA6;&#x662F;&#x5426;&#x63A5;&#x8FD1;&#x6781;&#x9650;&#x3002;&#x5F53;&#x524D;&#x81C2;&#x5C55;&#x4E3A;370, &#x6700;&#x5927;&#x7684;&#x81C2;&#x5C55;&#x4E3A;440</strong></p>
+<h5 id="&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x63A7;&#x5236;&#x673A;&#x68B0;&#x81C2;&#x6536;&#x7F29;">&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x63A7;&#x5236;&#x673A;&#x68B0;&#x81C2;&#x6536;&#x7F29;</h5>
+<hr>
+<pre><code>m.send_angles([0.0, 0.0, 0.0, -90.0, 0.0, 0, 0.0], 10) #&#x66F4;&#x6362;&#x521D;&#x59CB;&#x59FF;&#x6001;
+m.send_coord(1,200,10) #&#x63A7;&#x5236;&#x673A;&#x68B0;&#x81C2;&#x8FD0;&#x52A8;&#x5230;x=200&#x7684;&#x5750;&#x6807;&#x4F4D;&#x7F6E;
+</code></pre><p>&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x89C2;&#x6D4B;&#x5230;&#x673A;&#x68B0;&#x81C2;&#x672A;&#x54CD;&#x5E94;&#x6307;&#x4EE4;&#xFF0C;&#x540C;&#x65F6;&#x663E;&#x793A;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><strong>&#x9519;&#x8BEF;&#xFF1A;&#x5947;&#x5F02;&#x4F4D;&#x7F6E;&#x65E0;&#x89E3;&#x3002;&#x8BF7;&#x4F7F;&#x7528;<code>send_angles()</code>&#x65B9;&#x6CD5;&#x79BB;&#x5F00;&#x8BE5;&#x4F4D;&#x7F6E;&#x3002;&#x5728;&#x5173;&#x8282; 6 &#x5904;&#x68C0;&#x6D4B;&#x5230;&#x5947;&#x70B9;&#xFF1A;0.0 &#x5EA6;</strong></p>
+<h5 id="&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x6839;&#x636E;&#x63D0;&#x793A;&#x79BB;&#x5F00;&#x5947;&#x5F02;&#x4F4D;&#x7F6E;">&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x6839;&#x636E;&#x63D0;&#x793A;&#x79BB;&#x5F00;&#x5947;&#x5F02;&#x4F4D;&#x7F6E;</h5>
+<hr>
+<pre><code>m.send_angle(6,90,10) #&#x4F7F;&#x7528;&#x5173;&#x8282;&#x8FD0;&#x52A8;&#x79BB;&#x5F00;&#x5947;&#x5F02;&#x4F4D;&#x7F6E;
+m.send_coord(1, 474, 10) #&#x53D1;&#x9001;&#x4E00;&#x7EC4;&#x8D85;&#x51FA;&#x673A;&#x68B0;&#x81C2;&#x91CC;&#x7A0B;&#x7684;&#x5750;&#x6807;
+</code></pre><p>&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x89C2;&#x6D4B;&#x5230;&#x673A;&#x68B0;&#x81C2;&#x672A;&#x54CD;&#x5E94;&#x6307;&#x4EE4;&#xFF0C;&#x540C;&#x65F6;&#x663E;&#x793A;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><strong>&#x9519;&#x8BEF;: &#x53D1;&#x9001;&#x7684;&#x5750;&#x6807;&#x6570;&#x636E;&#x8D85;&#x51FA;&#x9650;&#x4F4D;</strong></p>
+<h5 id="&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x53D1;&#x9001;&#x9650;&#x4F4D;&#x5185;&#x5750;&#x6807;&#x503C;">&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF1A;&#x53D1;&#x9001;&#x9650;&#x4F4D;&#x5185;&#x5750;&#x6807;&#x503C;</h5>
+<hr>
+<h3 id="2&#x7535;&#x673A;&#x5F02;&#x5E38;">2.&#x7535;&#x673A;&#x5F02;&#x5E38;</h3>
+<p>&#x56FA;&#x4EF6;&#x7248;&#x672C; V1.0&#x7535;&#x673A;&#x5F02;&#x5E38;&#x65F6;&#xFF0C;&#x673A;&#x68B0;&#x81C2;&#x5BF9;&#x8FD0;&#x52A8;&#x6307;&#x4EE4;&#x65E0;&#x54CD;&#x5E94;&#xFF0C;&#x6B64;&#x65F6;&#x7EC8;&#x7AEF;&#x4E2D;&#x4F1A;&#x663E;&#x793A;&#x5BF9;&#x5E94;&#x7684;&#x9519;&#x8BEF;&#x5B57;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>0x31&#xFF08;49&#xFF09;&#xFF1A;&#x6389;&#x4F7F;&#x80FD;&#xFF1B;
+0x32&#xFF08;50&#xFF09;&#xFF1A;&#x7535;&#x673A;&#x62A5;&#x9519; 
+0x33&#xFF08;51&#xFF09;&#xFF1A;&#x7535;&#x673A;&#x7F16;&#x7801;&#x5668;&#x62A5;&#x9519;
+</code></pre><p>&#x51FA;&#x73B0;&#x6389;&#x4F7F;&#x80FD;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x4E0A;&#x4F7F;&#x80FD;&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<pre><code>m.focus_all_servos()
+</code></pre><p>&#x51FA;&#x73B0;&#x7535;&#x673A;&#x7F16;&#x7801;&#x5668;&#x62A5;&#x9519;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x8DF3;&#x53D8;&#x89D2;&#x5EA6;&#xFF0C;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x89C1;&#x4E0B;&#x65B9;&#xFF0C;&#x7136;&#x540E;&#x6574;&#x673A;&#x65AD;&#x7535;&#xFF0C;&#x82E5;&#x4ECD;&#x7136;&#x663E;&#x793A;&#x7F16;&#x7801;&#x5668;&#x5F02;&#x5E38;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x6211;&#x65B9;&#x5DE5;&#x7A0B;&#x5E08;&#x3002;</p>
+<pre><code>m.get_angles() #&#x67E5;&#x770B;&#x5F53;&#x524D;&#x89D2;&#x5EA6;
+</code></pre><p>&#x51FA;&#x73B0;&#x7535;&#x673A;&#x62A5;&#x9519;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x4E0B;&#x5217;&#x7A0B;&#x5E8F;</p>
+<pre><code>for i in range(1,8):
+    m.servo_restore(i) #&#x6E05;&#x9664;&#x7535;&#x673A;&#x62A5;&#x9519;
+#&#x91CD;&#x65B0;&#x4E0A;&#x4E0B;&#x7535;
+m.power_off()
+m.power_on()
+</code></pre><p>&#x82E5;&#x8FD0;&#x52A8;&#x65F6;&#x4ECD;&#x7136;&#x663E;&#x793A;&#x7535;&#x673A;&#x5F02;&#x5E38;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x6211;&#x65B9;&#x5DE5;&#x7A0B;&#x5E08;&#x3002;</p>
+<h2 id="3-&#x4F7F;&#x7528;&#x6CE8;&#x610F;">3 &#x4F7F;&#x7528;&#x6CE8;&#x610F;</h2>
+<p>&#x5DE6;&#x81C2;&#x6267;&#x884C;power_off&#xFF08;&#xFF09;&#x540E;&#x9700;&#x8981;&#x5148;&#x6267;&#x884C;power_on()&#xFF0C;&#x518D;&#x53F3;&#x81C2;&#x6267;&#x884C;power_off&#xFF08;&#xFF09;&#x3001;power_on&#xFF08;&#xFF09;&#x542F;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x3002;<br></p>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		<a href="6.1.6-VoiceFunction.html" class="navigation navigation-prev " aria-label="Previous page: 5 语音功能">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="../6.3-ROS2/" class="navigation navigation-next " aria-label="Next page: 5.2 机器人操作系统 2 (ROS2)">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"6 机器人异常处理","level":"3.1.1.6","depth":3,"next":{"title":"5.2 机器人操作系统 2 (ROS2)","level":"3.1.2","depth":2,"path":"6-SDKDevelopment/6.3-ROS2/README.md","ref":"6-SDKDevelopment/6.3-ROS2/README.md","articles":[{"title":"1 环境搭建","level":"3.1.2.1","depth":3,"path":"6-SDKDevelopment/6.3-ROS2/6.3.1-EnvironmentBuilding.md","ref":"6-SDKDevelopment/6.3-ROS2/6.3.1-EnvironmentBuilding.md","articles":[]},{"title":"2 ROS2 基础","level":"3.1.2.2","depth":3,"path":"6-SDKDevelopment/6.3-ROS2/6.3.2-ROS2_Basics.md","ref":"6-SDKDevelopment/6.3-ROS2/6.3.2-ROS2_Basics.md","articles":[]},{"title":"3 Rviz2 使用","level":"3.1.2.3","depth":3,"path":"6-SDKDevelopment/6.3-ROS2/6.3.3-Rviz2Introduction.md","ref":"6-SDKDevelopment/6.3-ROS2/6.3.3-Rviz2Introduction.md","articles":[]},{"title":"4 基本功能案例","level":"3.1.2.4","depth":3,"path":"6-SDKDevelopment/6.3-ROS2/6.3.4-BasicFunction.md","ref":"6-SDKDevelopment/6.3-ROS2/6.3.4-BasicFunction.md","articles":[]}]},"previous":{"title":"5 语音功能","level":"3.1.1.5","depth":3,"path":"6-SDKDevelopment/6.1-Python/6.1.6-VoiceFunction.md","ref":"6-SDKDevelopment/6.1-Python/6.1.6-VoiceFunction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeFexa":{"showHome":false,"showNavigator":false}},"plugins":["chapter-fold","expandable-chapters","back-to-top-button","password-z","-lunr","-search","search-pro","theme-fexa","splitter","-sharing","klipse","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"password-z":{},"theme-fexa":{"search-placeholder":"Input Keywords to Search","logo":"/photo/logo.png","logoLink":"https://www.elephantrobotics.com","favicon":"./favicon.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"klipse":{"myConfigKey":"it's the default value"},"password":{},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"6-SDKDevelopment/6.1-Python/6.1.7-ExceptionHandling.md","mtime":"2026-03-16T01:51:10.768Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-04-22T08:30:22.497Z"},"basePath":"../..","book":{"language":""}});
+		});
+	</script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-password-z/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+
+    </body>
+</html>
+

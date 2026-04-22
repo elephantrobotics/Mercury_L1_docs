@@ -1,0 +1,979 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6 Robot Exception Handling · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-password-z/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../6.2-ROS1/" />
+    
+    
+    <link rel="prev" href="6.1.7-VoiceFunction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+		<span class="title"></span>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">Catalogue</div>
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Product Information</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../1-ProductIntroduction/">
+            
+                <a href="../../1-ProductIntroduction/">
+            
+                    
+                    1 Product Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../2-ProductFeature/">
+            
+                <a href="../../2-ProductFeature/">
+            
+                    
+                    2 Product Specifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Setup</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../3-UserNotes/">
+            
+                <a href="../../3-UserNotes/">
+            
+                    
+                    3 User Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../4-FirstInstallAndUse/">
+            
+                <a href="../../4-FirstInstallAndUse/">
+            
+                    
+                    4 First Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Functions and Applications</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    5 Software Development Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    5.1 Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="6.1.2-ApplicationBasePython.html">
+            
+                <a href="6.1.2-ApplicationBasePython.html">
+            
+                    
+                    1 API Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="6.1.3-PythonDemo.html">
+            
+                <a href="6.1.3-PythonDemo.html">
+            
+                    
+                    2 Python Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="6.1.4-Drag_teach.html">
+            
+                <a href="6.1.4-Drag_teach.html">
+            
+                    
+                    3 Drag Teaching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="6.1.5-gripper_en.html">
+            
+                <a href="6.1.5-gripper_en.html">
+            
+                    
+                    4 Gripper Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="6.1.7-VoiceFunction.html">
+            
+                <a href="6.1.7-VoiceFunction.html">
+            
+                    
+                    5 Voice Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.1.6" data-path="6.1.6-ExceptionHandling.html">
+            
+                <a href="6.1.6-ExceptionHandling.html">
+            
+                    
+                    6 Robot Exception Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../6.2-ROS1/">
+            
+                <a href="../6.2-ROS1/">
+            
+                    
+                    5.2 ROS1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../6.2-ROS1/6.2.1-EnvironmentBuilding.html">
+            
+                <a href="../6.2-ROS1/6.2.1-EnvironmentBuilding.html">
+            
+                    
+                    1 Environment Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="../6.2-ROS1/6.2.2-ROS_Basics.html">
+            
+                <a href="../6.2-ROS1/6.2.2-ROS_Basics.html">
+            
+                    
+                    2 ROS Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="../6.2-ROS1/6.2.3-RvizIntroduction.html">
+            
+                <a href="../6.2-ROS1/6.2.3-RvizIntroduction.html">
+            
+                    
+                    3 Using Rviz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="../6.2-ROS1/6.2.4-BasicFunction.html">
+            
+                <a href="../6.2-ROS1/6.2.4-BasicFunction.html">
+            
+                    
+                    4 Basic Function Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.5" data-path="../6.2-ROS1/6.2.5-gmapping.html">
+            
+                <a href="../6.2-ROS1/6.2.5-gmapping.html">
+            
+                    
+                    5 Gmapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.6" data-path="../6.2-ROS1/6.2.6-navigation.html">
+            
+                <a href="../6.2-ROS1/6.2.6-navigation.html">
+            
+                    
+                    6 Navigaiton
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../6.3-ROS2/">
+            
+                <a href="../6.3-ROS2/">
+            
+                    
+                    5.3 ROS2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../6.3-ROS2/6.3.1-EnvironmentBuilding.html">
+            
+                <a href="../6.3-ROS2/6.3.1-EnvironmentBuilding.html">
+            
+                    
+                    1 Environment Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../6.3-ROS2/6.3.2-ROS2_Basics.html">
+            
+                <a href="../6.3-ROS2/6.3.2-ROS2_Basics.html">
+            
+                    
+                    2 ROS2 Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.3" data-path="../6.3-ROS2/6.3.3-Rviz2Introduction.html">
+            
+                <a href="../6.3-ROS2/6.3.3-Rviz2Introduction.html">
+            
+                    
+                    3 Using Rviz2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="../6.3-ROS2/6.3.4-BasicFunction.html">
+            
+                <a href="../6.3-ROS2/6.3.4-BasicFunction.html">
+            
+                    
+                    4 Basic Function Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../6.4-Communication.html">
+            
+                <a href="../6.4-Communication.html">
+            
+                    
+                    5.4 Development based on communication protocol packets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../7-ExamplesRobotsUsing/">
+            
+                <a href="../../7-ExamplesRobotsUsing/">
+            
+                    
+                    6 Robot Usage Scenarios
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../7-ExamplesRobotsUsing/7.1-stag_detect.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.1-stag_detect.html">
+            
+                    
+                    6.1 QR Code Recognition and Grasping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../7-ExamplesRobotsUsing/7.2-robot_move.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.2-robot_move.html">
+            
+                    
+                    6.2 Spatial Movement Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../7-ExamplesRobotsUsing/7.3-move_and_catch.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.3-move_and_catch.html">
+            
+                    
+                    6.3 Multi-Point Movement and Grasping Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../7-ExamplesRobotsUsing/7.4-keyboard.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.4-keyboard.html">
+            
+                    
+                    6.4 Keyboard typing Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../7-ExamplesRobotsUsing/7.5-dexteroushand_control.html">
+            
+                <a href="../../7-ExamplesRobotsUsing/7.5-dexteroushand_control.html">
+            
+                    
+                    6.5 Dexterous hand Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Support and Services</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../8-AboutUs/8-AboutUs.html">
+            
+                <a href="../../8-AboutUs/8-AboutUs.html">
+            
+                    
+                    7 About Us
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../8-AboutUs/8.1-company.html">
+            
+                <a href="../../8-AboutUs/8.1-company.html">
+            
+                    
+                    7.1 Elephant Robotics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../8-AboutUs/8.3-how_to_read.html">
+            
+                <a href="../../8-AboutUs/8.3-how_to_read.html">
+            
+                    
+                    7.2 How to Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../8-AboutUs/8.2-contact.html">
+            
+                <a href="../../8-AboutUs/8.2-contact.html">
+            
+                    
+                    7.3 Contact us
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Acknowledgments</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../9-Acknowledgments/">
+            
+                <a href="../../9-Acknowledgments/">
+            
+                    
+                    8 Acknowledgments
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<!-- Content nav -->
+	<div class="book-anchor">
+		<div class="book-anchor-title">In this Chapter:</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >6 Robot Exception Handling</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<h1 id="robot-arm-exception-inspection-and-handling-methods">Robot Arm Exception Inspection and Handling Methods</h1>
+<p>When the robot arm fails to execute motion commands successfully, corresponding exception information can be queried in the Python terminal&#xFF1A;<br></p>
+<h2 id="1-check-robot-status">1 Check Robot Status</h2>
+<h3 id="11-status-feedback-analysis">1.1 Status Feedback Analysis</h3>
+<p>Normally, this interface returns all zeros, indicating no issues. The robot status can be read, with feedback differing between the left and right arms, as detailed below:<br></p>
+<h4 id="read-robot-status">Read Robot Status</h4>
+<hr>
+<pre><code>m.get_robot_status()  # Read robot status
+</code></pre><h4 id="left-arm-status-explanation">Left Arm Status Explanation</h4>
+<p><code>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]</code> represents:<br>
+The robot is not moving, with no joint limit violations, hardware errors, or software errors.<br></p>
+<p>Each value corresponds to the following explanation.<br>
+<code>[Reserved, Movement Status, J1 Limit Violation, J2 Limit Violation, J3 Limit Violation, J4 Limit Violation, J5 Limit Violation, J6 Limit Violation, J7 Limit Violation, J1 Hardware Error, J2 Hardware Error, J3 Hardware Error, J4 Hardware Error, J5 Hardware Error, J6 Hardware Error, J7 Hardware Error, J1 Software Error, J2 Software Error, J3 Software Error, J4 Software Error, J5 Software Error, J6 Software Error, J7 Software Error]</code></p>
+<p><strong>Examples:</strong><br>
+<code>[0,1,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0]</code> represents:<br>
+The robot encountered a control error on J4 while moving.<br></p>
+<p><code>[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]</code> represents:<br>
+Robot J2 overlimit.<br></p>
+<p><code>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0]</code> represents:<br>
+Robot J5 circuit anomaly - reception error.<br></p>
+<h4 id="right-arm-status-explanation">Right Arm Status Explanation</h4>
+<p><code>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]</code> represents:<br>
+The robot is not moving, no joint overlimit, no joint hardware errors, no joint software errors.<br></p>
+<p>The complete analysis of each value is as follows::<br>
+<code>[Reserved, Is moving, J1 overlimit, J2 overlimit, J3 overlimit, J4 overlimit, J5 overlimit, J6 overlimit, J7 overlimit, J13 overlimit, J1 hardware error, J2 hardware error, J3 hardware error, J4 hardware error, J5 hardware error, J6 hardware error, J7 hardware error, J13 hardware error, J11 hardware error, J12 hardware error, J1 software error, J2 motor software error, J3 software error, J4 software error, J5 software error, J6 software error, J7 software error, J13 software error]</code><br></p>
+<p><strong>Examples:</strong><br></p>
+<p><code>[0,1,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0]</code> represents:<br>
+The robot reports an error while moving, J4 reports a control error.<br></p>
+<p><code>[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]</code> represents:<br>
+Robot J2 overlimit.<br></p>
+<p><code>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0]</code> represents:<br>
+Robot J5 circuit anomaly - reception error.<br></p>
+<p><code>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0]</code> represents:<br>
+Robot binoculars and neck communication error.<br></p>
+<h3 id="12-error-resolution">1.2 Error Resolution</h3>
+<h4 id="joint-overlimit">Joint Overlimit</h4>
+<p>When a joint exceeds its limit, one of the following methods can be used to resolve it:<br></p>
+<h5 id="perform-overlimit-return-to-zero">Perform overlimit return to zero:</h5>
+<p> The robot will return to the origin at a slower speed.<br></p>
+<hr>
+<pre><code>m.over_limit_return_zero() 
+</code></pre><h5 id="release-the-joint-and-manually-move-it-back-within-the-limit">Release the joint and manually move it back within the limit:</h5>
+<hr>
+<pre><code>m.release_all_servo() 
+</code></pre><h4 id="joint-hardware-error">Joint Hardware Error</h4>
+<p>Most hardware errors can be recovered using an exception recovery method:<br></p>
+<hr>
+<pre><code>m.servo_restore(ID) 
+</code></pre><p>If the issue persists after using exception recovery or rebooting the robot, please contact our engineers. For detailed joint hardware errors, refer to Figure 1:<br>
+<img src="../../resources/6-SDKDevelopment/6.1-Python/6.1.6/6-1-6-1.2-001.png" alt="pic" width="500" height="400"><br></p>
+<h4 id="joint-software-error">Joint Software Error</h4>
+<p>Software errors mainly include: circuit anomalies, CAN module anomalies, encoder anomalies, loss of enable, etc.<br></p>
+<p>When there is a loss of enable, use the following to re-enable the servo before continuing movement:<br></p>
+<hr>
+<pre><code>m.focus_all_servo() 
+</code></pre><p>For other anomalies, please contact our engineers. Detailed joint software errors can be found in Figures 2 and 3:<br>
+<img src="../../resources/6-SDKDevelopment/6.1-Python/6.1.6/6-1-6-1.2-002.png" alt="pic" width="500" height="400">
+<img src="../../resources/6-SDKDevelopment/6.1-Python/6.1.6/6-1-6-1.2-003.png" alt="pic" width="500" height="400"></p>
+<h4 id="robot-in-motion-state-but-unable-to-move">Robot in Motion State, but Unable to Move</h4>
+<p>If the robot is in a motion state and does not respond to new motion commands, first stop the robot&apos;s motion:<br></p>
+<hr>
+<pre><code>m.stop() 
+m.resume() 
+</code></pre><p>If the robot still cannot move, please contact our engineers.<br></p>
+<h2 id="2-check-the-feedback-of-executing-motion-commands">2 Check the feedback of executing motion commands</h2>
+<h3 id="21-motion-exceptions">2.1 Motion Exceptions</h3>
+<h4 id="controlling-the-robotic-arm-to-an-out-of-range-position">Controlling the Robotic Arm to an Out-of-Range Position</h4>
+<pre><code>form pymycobot import Mercury
+m = Mercury(&apos;/dev/ttyAMA1&apos;)
+
+m.set_joint_max_angles(1,45) # Set joint 1 limit to 45&#xB0;
+m.send_angle(1,50,10)   # Control joint 1 to rotate to 50&#xB0;
+</code></pre><p>At this point, the robotic arm will stop at the limit position and display the following message:</p>
+<p><strong>Error: Joint 1 is close to the limit, current angle is 45.535, angle range: -165.0 ~ 45.0</strong></p>
+<h5 id="solution-avoid-software-limit-by-following-the-indicated-angle-range">Solution: Avoid software limit by following the indicated angle range.</h5>
+<hr>
+<h4 id="cartesian-motion">Cartesian Motion</h4>
+<pre><code>m.send_angles([0.0, 0.0, 0.0, -90.0, 0.0, 89.999, 0.0], 10) # Move the robotic arm to the initial posture
+
+m.send_coord(1,-200,10)  # Move the robotic arm to the coordinate position x = -200
+</code></pre><p>At this point, the robotic arm stops mid-motion and displays the following message:</p>
+<p><strong>Error: Joint 2 is close to the limit, current angle is -49.967, angle range: -50.0 ~ 120.0</strong></p>
+<h5 id="solution-avoid-software-limit-by-following-the-indicated-angle-range">Solution: Avoid software limit by following the indicated angle range.</h5>
+<hr>
+<pre><code>m.send_coord(3,500,10) # Move the robotic arm to the coordinate position z = 500
+</code></pre><p>At this point, the robotic arm stops mid-motion and displays the following message:</p>
+<p><strong>Error: No adjacent solution for linear motion. Check if the arm span is near the limit. Current arm span is 370, maximum arm span is 440  </strong></p>
+<h5 id="solution-retract-the-robotic-arm">Solution: Retract the robotic arm.</h5>
+<hr>
+<pre><code>m.send_angles([0.0, 0.0, 0.0, -90.0, 0.0, 0, 0.0], 10) # Change initial posture
+m.send_coord(1,200,10) # Move the robotic arm to the coordinate position x = 200
+</code></pre><p>At this point, the robotic arm does not respond to the command and displays the following message:</p>
+<p><strong>Error: Singular position, no solution found. Use send_angles() method to leave this position. Singularity detected at joint 6: 0.0 degrees</strong></p>
+<h5 id="solution-move-out-of-the-singular-position-as-instructed">Solution: Move out of the singular position as instructed.</h5>
+<hr>
+<pre><code>m.send_angle(6,90,10) # Use joint motion to move out of the singular position
+m.send_coord(1, 474, 10) # Send a set of coordinates that exceed the robotic arm&#x2019;s range
+</code></pre><p>At this point, the robotic arm does not respond to the command and displays the following message:</p>
+<p><strong>Error: Sent coordinate data is out of range</strong></p>
+<h5 id="solution-send-coordinate-values-within-the-limit">Solution: Send coordinate values within the limit.</h5>
+<hr>
+<h3 id="22-motion-exceptions">2.2 Motion Exceptions</h3>
+<h4 id="controlling-the-robotic-arm-to-an-out-of-range-position">Controlling the Robotic Arm to an Out-of-Range Position</h4>
+<pre><code>form pymycobot import Mercury
+m = Mercury(&apos;/dev/ttyAMA1&apos;)
+
+m.set_joint_max_angles(1,45) # Set joint 1 limit to 45&#xB0;
+m.send_angle(1,50,10)   # Control joint 1 to rotate to 50&#xB0;
+</code></pre><p>At this point, the robotic arm will stop at the limit position and display the following message:</p>
+<p><strong>Error: Joint 1 is close to the limit, current angle is 45.535, angle range: -165.0 ~ 45.0</strong></p>
+<h5 id="solution-avoid-software-limit-by-following-the-indicated-angle-range">Solution: Avoid software limit by following the indicated angle range.</h5>
+<hr>
+<h3 id="cartesian-motion">Cartesian Motion</h3>
+<pre><code>m.send_angles([0.0, 0.0, 0.0, -90.0, 0.0, 89.999, 0.0], 10) # Move the robotic arm to the initial posture
+
+m.send_coord(1,-200,10)  # Move the robotic arm to the coordinate position x = -200
+</code></pre><p>At this point, the robotic arm stops mid-motion and displays the following message:</p>
+<p><strong>Error: Joint 2 is close to the limit, current angle is -49.967, angle range: -50.0 ~ 120.0</strong></p>
+<h5 id="solution-avoid-software-limit-by-following-the-indicated-angle-range">Solution: Avoid software limit by following the indicated angle range.</h5>
+<hr>
+<pre><code>m.send_coord(3,500,10) # Move the robotic arm to the coordinate position z = 500
+</code></pre><p>At this point, the robotic arm stops mid-motion and displays the following message:</p>
+<p><strong>Error: No adjacent solution for linear motion. Check if the arm span is near the limit. Current arm span is 370, maximum arm span is 440  </strong></p>
+<h5 id="solution-retract-the-robotic-arm">Solution: Retract the robotic arm.</h5>
+<hr>
+<pre><code>m.send_angles([0.0, 0.0, 0.0, -90.0, 0.0, 0, 0.0], 10) # Change initial posture
+m.send_coord(1,200,10) # Move the robotic arm to the coordinate position x = 200
+</code></pre><p>At this point, the robotic arm does not respond to the command and displays the following message:</p>
+<p><strong>Error: Singular position, no solution found. Use send_angles() method to leave this position. Singularity detected at joint 6: 0.0 degrees</strong></p>
+<h5 id="solution-move-out-of-the-singular-position-as-instructed">Solution: Move out of the singular position as instructed.</h5>
+<hr>
+<pre><code>m.send_angle(6,90,10) # Use joint motion to move out of the singular position
+m.send_coord(1, 474, 10) # Send a set of coordinates that exceed the robotic arm&#x2019;s range
+</code></pre><p>At this point, the robotic arm does not respond to the command and displays the following message:</p>
+<p><strong>Error: Sent coordinate data is out of range</strong></p>
+<h5 id="solution-send-coordinate-values-within-the-limit">Solution: Send coordinate values within the limit.</h5>
+<hr>
+<h3 id="22-motor-exceptions">2.2 Motor Exceptions</h3>
+<p>In firmware version V1.0, when a motor exception occurs, the robotic arm does not respond to motion commands, and corresponding error codes are displayed in the terminal, such as:</p>
+<pre><code>0x31&#xFF08;49&#xFF09;&#xFF1A;Lost enabling;
+0x32&#xFF08;50&#xFF09;&#xFF1A;Motor error;
+0x33&#xFF08;51&#xFF09;&#xFF1A;Motor encoder error.
+</code></pre><p>If the lost enabling error occurs, re-enable by executing the following program:</p>
+<pre><code>m.focus_all_servos()
+</code></pre><p>If a motor encoder error occurs, check the current angle, execute the program below, then power off the device. If the encoder error persists, contact our engineers.</p>
+<pre><code>m.get_angles() # Check the current angles   
+</code></pre><p>After a motor error, run the following program:</p>
+<pre><code>for i in range(1,8):
+    m.servo_restore(i) # Clear motor error
+# Power cycle the device
+m.power_off()
+m.power_on()
+</code></pre><p>If a motor exception continues to display during motion, please contact our engineers.</p>
+<h2 id="3-usage-note">3 Usage Note</h2>
+<p>After the left arm executes power_off(), you need to first execute power_on() before performing power_off() and power_on() for the right arm to start the robot.<br></p>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		<a href="6.1.7-VoiceFunction.html" class="navigation navigation-prev " aria-label="Previous page: 5 Voice Function">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="../6.2-ROS1/" class="navigation navigation-next " aria-label="Next page: 5.2 ROS1">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"6 Robot Exception Handling","level":"3.1.1.6","depth":3,"next":{"title":"5.2 ROS1","level":"3.1.2","depth":2,"path":"6-SDKDevelopment/6.2-ROS1/README.md","ref":"6-SDKDevelopment/6.2-ROS1/README.md","articles":[{"title":"1 Environment Setup","level":"3.1.2.1","depth":3,"path":"6-SDKDevelopment/6.2-ROS1/6.2.1-EnvironmentBuilding.md","ref":"6-SDKDevelopment/6.2-ROS1/6.2.1-EnvironmentBuilding.md","articles":[]},{"title":"2 ROS Basics","level":"3.1.2.2","depth":3,"path":"6-SDKDevelopment/6.2-ROS1/6.2.2-ROS_Basics.md","ref":"6-SDKDevelopment/6.2-ROS1/6.2.2-ROS_Basics.md","articles":[]},{"title":"3 Using Rviz","level":"3.1.2.3","depth":3,"path":"6-SDKDevelopment/6.2-ROS1/6.2.3-RvizIntroduction.md","ref":"6-SDKDevelopment/6.2-ROS1/6.2.3-RvizIntroduction.md","articles":[]},{"title":"4 Basic Function Examples","level":"3.1.2.4","depth":3,"path":"6-SDKDevelopment/6.2-ROS1/6.2.4-BasicFunction.md","ref":"6-SDKDevelopment/6.2-ROS1/6.2.4-BasicFunction.md","articles":[]},{"title":"5 Gmapping","level":"3.1.2.5","depth":3,"path":"6-SDKDevelopment/6.2-ROS1/6.2.5-gmapping.md","ref":"6-SDKDevelopment/6.2-ROS1/6.2.5-gmapping.md","articles":[]},{"title":"6 Navigaiton","level":"3.1.2.6","depth":3,"path":"6-SDKDevelopment/6.2-ROS1/6.2.6-navigation.md","ref":"6-SDKDevelopment/6.2-ROS1/6.2.6-navigation.md","articles":[]}]},"previous":{"title":"5 Voice Function","level":"3.1.1.5","depth":3,"path":"6-SDKDevelopment/6.1-Python/6.1.7-VoiceFunction.md","ref":"6-SDKDevelopment/6.1-Python/6.1.7-VoiceFunction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeFexa":{"showHome":false,"showNavigator":false}},"plugins":["chapter-fold","expandable-chapters","back-to-top-button","password-z","-lunr","-search","search-pro","theme-fexa","splitter","-sharing","klipse","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"password-z":{},"theme-fexa":{"search-placeholder":"Input Keywords to Search","logo":"/photo/logo.png","logoLink":"https://www.elephantrobotics.com/en","favicon":"./favicon.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"klipse":{"myConfigKey":"it's the default value"},"password":{},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"6-SDKDevelopment/6.1-Python/6.1.6-ExceptionHandling.md","mtime":"2026-04-22T03:18:49.943Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-04-22T08:53:09.519Z"},"basePath":"../..","book":{"language":""}});
+		});
+	</script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-password-z/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+
+    </body>
+</html>
+
